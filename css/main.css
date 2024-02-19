@@ -80,6 +80,15 @@ nav ul li a {
         margin-right: 13%;
         transition: all 0;
     }
+    .title{
+        margin-left: 100px;
+        position: relative;
+        display:inline-block;
+
+    } 
+    .text{
+        width: 100%;
+    }
 }
 
 @media (max-width: 871px) {
@@ -110,9 +119,8 @@ nav ul li a {
     #check:checked~nav ul {
         top: 80px;
     }
-}
 
-@media (max-width: 600px){}
+}
 
 a.active,
 a:hover {
@@ -125,57 +133,66 @@ a:hover {
 .s-intro {
     width: 100%;
 }
-
 .intro-content {
-    margin-top: 5%;
-    margin-left: 10%;
     width: 100%;
-
 }
-
 .intro-pic {
     border-radius: 100%;
-    width: 50%;
-    margin-left: 10%;
-    position: absolute;
+    width: 50vh;
     z-index: 2;
+    position: relative;
+    display: block;
 }
-
 .intro-pic:hover {
     box-shadow: 0 0 13px #f8edda;
     transition: all 0.5s;
 }
 
-.intro-pic:hover~.icos {
-    margin-top: 47%;
+.desc:hover+.icos {
+    margin-top: 33%;
     transition: all 0.5s;
 }
-.icos:hover{
-    margin-top: 47%;
+
+.icos:hover {
+    margin-top: 33%;
 }
+
 .langico {
-    width: 7%;
+    width: 7vh;
     position: relative;
-    z-index: 1;
-    margin-right: 2%;
-    margin-left: 2%;
-    margin-top: 8%;
+    z-index: 6;
+    margin-right: 2vh;
+    margin-left: 2vh;
 }
 
 .icos {
-    margin-left: 17%;
+    margin-left: 20.5%;
+    width: fit-content;
     margin-top: 20%;
     transition: margin-top 1s ease-in-out;
     transition-delay: 2s;
+    position: absolute;
 }
 
 .desc {
     z-index: 2;
-    margin-top: 7%;
-    margin-left: -20%;
-    font-size: 37px;
+    margin-top: 8%;
+    margin-left: 19.5%;
+    position: absolute;
 }
-
-.row {
-    width: 100%;
+.display-4 {
+    font-size: 37px;
+    display: inline-block;
+    width: fit-content;
+    height: 10px;
+}
+.title {
+    display: block;
+    width: 50%;
+    position: relative;
+    margin-top: -27%;
+    margin-left: 31%;
+}
+.text{
+    width: 70%;
 }
