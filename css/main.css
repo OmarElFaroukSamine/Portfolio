@@ -1,16 +1,21 @@
 body {
     background-color: #0e131a;
-    height: 100vh;
-    width: 100%;
+    height: 100dvh;
+    width: 100dvw;
     color: white;
-
 }
-
+header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    z-index: 200;
+}
 nav {
-    width: 100%;
+    width: 100dvw;
     height: 80px;
     background-color: #0e131a;
-    position: relative;
+    position: sticky;
+    top: 0;
     z-index: 3;
 }
 
@@ -19,7 +24,7 @@ label.logo {
     line-height: 80px;
     font-weight: bold;
     margin-left: 20px;
-    position: absolute;
+    position: sticky;
     z-index: 4;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: inline-block;
@@ -32,12 +37,14 @@ label.logo {
 
 nav ul {
     float: right;
+    position: relative;
     margin-right: 29%;
     transition: all 0.7s;
 }
 
 nav ul li {
     display: inline-block;
+    position: relative;
     margin: 0 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: large;
@@ -53,16 +60,14 @@ nav ul li a {
     text-decoration: none;
     font-size: 17px;
     text-transform: uppercase;
+    position: sticky;
 }
 
 .checkbtn {
     font-size: 30px;
     color: white;
-    float: right;
     line-height: 80px;
-    margin-right: 40px;
-    position: relative;
-    z-index: 4;
+    z-index: 5;
     cursor: pointer;
     display: none;
 }
@@ -71,57 +76,7 @@ nav ul li a {
     display: none;
 }
 
-@media (max-width: 1087px) {
-    nav ul li a {
-        font-size: 16px;
-    }
-
-    nav ul {
-        margin-right: 13%;
-        transition: all 0;
-    }
-    .title{
-        margin-left: 100px;
-        position: relative;
-        display:inline-block;
-
-    } 
-    .text{
-        width: 100%;
-    }
-}
-
-@media (max-width: 871px) {
-    .checkbtn {
-        display: block;
-    }
-
-    nav ul {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background-color: #0e131a;
-        top: 80px;
-        top: -300%;
-        text-align: center;
-        transition: all 0.5s;
-
-    }
-
-    nav ul li {
-        display: block;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-    }
-
-    #check:checked~nav ul {
-        top: 80px;
-    }
-
-}
-
+/*Main Part of CSS*/
 a.active,
 a:hover {
     opacity: 1;
@@ -130,19 +85,10 @@ a:hover {
     text-decoration: none;
 }
 
-.s-intro {
-    width: 100%;
-}
 .intro-content {
-    width: 100%;
+    width: 100dvw;
 }
-.intro-pic {
-    border-radius: 100%;
-    width: 50vh;
-    z-index: 2;
-    position: relative;
-    display: block;
-}
+
 .intro-pic:hover {
     box-shadow: 0 0 13px #f8edda;
     transition: all 0.5s;
@@ -153,16 +99,45 @@ a:hover {
     transition: all 0.5s;
 }
 
+.intro-pic {
+    border-radius: 100%;
+    width: 50%;
+}
+
+.pic {
+    width: 50dvw;
+    margin-right: -28dvw;
+    position: relative;
+    flex: 1;
+}
+
+.text {
+    position: relative;
+    flex: 1;
+    margin-left: 5%;
+}
+.atext{
+    width: 50dvw;
+}
+.desc {
+    margin-left: 20%;
+    margin-top: 5%;
+    display: flex;
+    transition: margin-left 0.5s ease-in-out;
+    flex-wrap: wrap;
+}
+
+/*icons*/
 .icos:hover {
     margin-top: 33%;
 }
 
 .langico {
-    width: 7vh;
+    width: 7dvh;
     position: relative;
     z-index: 6;
-    margin-right: 2vh;
-    margin-left: 2vh;
+    margin-right: 2dvh;
+    margin-left: 2dvh;
 }
 
 .icos {
@@ -174,25 +149,96 @@ a:hover {
     position: absolute;
 }
 
-.desc {
-    z-index: 2;
-    margin-top: 8%;
-    margin-left: 19.5%;
-    position: absolute;
+@media (max-width: 1100px) {
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    nav ul {
+        margin-right: 13%;
+        transition: all 0;
+    }
+
+    .desc {
+        margin-left: 12dvw !important;
+        transition: margin-left 0.5s ease-in-out;
+    }
 }
-.display-4 {
-    font-size: 37px;
-    display: inline-block;
-    width: fit-content;
-    height: 10px;
+
+@media (max-width: 1000px) {
+    .desc {
+        flex-direction: column;
+        margin-left: 0dvw !important;
+        width: 100dvw;
+    }
+
+    .text {
+        margin-left: 25dvw !important;
+    }
+    .intro-pic{
+        width: 50dvw !important;
+    }
+    .pic {
+        padding-left: 26dvw !important;
+    }
 }
-.title {
-    display: block;
-    width: 50%;
-    position: relative;
-    margin-top: -27%;
-    margin-left: 31%;
+
+@media (max-width: 871px) {
+    .checkbtn {
+        position: fixed;
+        display: block;
+        float: right;
+    }
+    nav ul {
+        position: fixed;
+        padding-left: 0%!important;
+        width: 100dvw;
+        height: 100dvh;
+        background-color: #0e131a;
+        top: 80px;
+        top: -300%;
+        text-align: center;
+        transition: all 0.5s;
+        margin-left: 0% !important;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    .display-4 {
+        font-size: 40px;
+    }
+    #check:checked~nav ul {
+        top: 80px!important;
+    }
 }
-.text{
-    width: 70%;
-}
+
+@media (max-width:641px) {
+    .pic {
+        width: 100vw !important;
+    }
+    .intro-pic{
+        width: 100vw;
+    }
+    .text{
+        font-size: small;
+        text-align:justify;
+        margin-left: 0vw !important;
+        margin-top: 5dvh;
+
+    }
+    .display-4{
+        padding-left: 14vw;
+
+    }
+    .atext{
+        width: 86% !important;
+        padding-left: 14vw;
+        font-size: large;
+    }
+    .text .display-4{
+        font-size: 30px;
+    }
+    }
