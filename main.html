@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>portfolio</title>
+    <title>Portfolio</title>
     <script src="https://kit.fontawesome.com/5c7a3b9bec.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,8 +12,11 @@
 
 <body>
     <header class="s-header">
-
         <nav class="header-nav-wrap">
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa-solid fa-bars"></i>
+            </label>
             <label class="logo">OFS</label>
             <ul class="header-main-nav">
                 <li><a href="#intro" class="active">Intro</a></li>
@@ -24,10 +27,6 @@
                 <li><a href="#contact" title="contact us">Say Hello</a></li>
             </ul>
         </nav>
-        <input type="checkbox" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fa-solid fa-bars"></i>
-        </label>
     </header>
     <section id="intro" class="s-intro target-section">
         <div class="intro-content">
@@ -37,17 +36,64 @@
                 </div>
                 <div class="text">
                     <p class="display-4">Computer Science <br> Student</p>
-                    <p class="atext">I'm a Computer Science student who thrives in the ever-changing tech landscape.
-                        I've built a solid foundation in programming and computer programs, I adapt quickly to new
-                        challenges and technologies. Eager to contribute to the evolving world of computing. Let's
-                        connect and explore the boundless possibilities at the intersection of tech and creativity!</p>
+                    <p class="atext">A tech enthusiast that is striving for the best that life can offer !!</p>
                 </div>
+            </div>
+            <div class="icos">
+                <img class="langico cpp" src="/resources/C++.png" alt="">
+                <img class="langico html5" src="/resources/HTML5.png" alt="">
+                <img class="langico py" src="/resources/Python.png" alt="">
+                <img class="langico bash" src="/resources/bash.png" alt="">
             </div>
         </div> <!-- end row -->
     </section>
-    <div style="margin-top: 100%;">dqsd</div>
-    <script> </script>
+    <section id="about" class="s-about target-section">
 
+        <div class="container about-me">
+            <div class="row">
+                <h2 class="display-4 am">About Me</h2>
+            </div>
+            <div class="row">
+                <div class="col ">
+                    <p class="lead">
+                        I'm a Computer Science student who thrives in the ever-changing tech landscape. I've built a
+                        solid foundation
+                        in programming and computer programs, I adapt quickly to new challenges and technologies.
+                        Eager to contribute to the evolving world of computing. Let's connect and explore the boundless
+                        possibilities
+                        at the intersection of tech and creativity! <br> <br><strong>More on :</strong>
+                    </p>
+                    <div class="plink">
+                        <a href="https://github.com/OmarElFaroukSamine/"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/omar-el-farouk-samine/"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <p>
+                        Ever since I was a kid, discovering new technologies has piqued my interest. I've dived into the
+                        world of computer architecture at a very young age, thanks to computers being available at my
+                        home. I used to always open my countless broken computers and troubleshoot them by myself, and
+                        it was one of the things that created a love for problem-solving in me.
+
+                    </p>
+
+                    <p>
+                        When I started high school, I started getting introduced to programming and coding, thanks to my
+                        amazing role model, My brother Mohammed Samine. Ever since then, I've been trying to improve my
+                        skills in the field, I've acquired a lot of skills in various programming languages like Python,
+                        and C++. I've also gained knowledge in web development technologies like HTML5, Javascript, CSS,
+                        and PHP.
+
+                    </p>
+                    <p>I feel like my skills and my love for problem-solving are the drives that make me have potential
+                        in the field of computer science. I'm looking forward to finishing my studies and becoming a
+                        driving force in the industry !!
+                    </p>
+                </div>
+            </div>
+        </div> <!-- end about-me -->
+    </section>
 </body>
 
 </html>

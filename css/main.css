@@ -1,22 +1,26 @@
+
+/*Main Part of CSS*/
 body {
-    background-color: #0e131a;
     height: 100dvh;
+    background-color: white;
     width: 100dvw;
     color: white;
+    overflow-x: hidden;
+
 }
 header{
     position: fixed;
     top: 0;
     display: flex;
-    z-index: 200;
+    z-index: 30;
 }
 nav {
     width: 100dvw;
     height: 80px;
     background-color: #0e131a;
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 3;
+    z-index: 8;
 }
 
 label.logo {
@@ -25,7 +29,7 @@ label.logo {
     font-weight: bold;
     margin-left: 20px;
     position: sticky;
-    z-index: 4;
+    z-index: 10;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: inline-block;
     left: 12px;
@@ -67,25 +71,39 @@ nav ul li a {
     font-size: 30px;
     color: white;
     line-height: 80px;
-    z-index: 5;
     cursor: pointer;
     display: none;
+    z-index: 10;
+    margin-right: 5%;
 }
 
 #check {
     display: none;
 }
-
-/*Main Part of CSS*/
-a.active,
-a:hover {
+.s-intro{
+    background-color: #0e131a;
+    height: 100%;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+nav a.active,
+nav a:hover {
     opacity: 1;
     color: white;
     transition: 0.5s;
     text-decoration: none;
+}  
+a.active,
+a:hover {
+    opacity: 1;
+    color: #0e131a;
+    transition: 0.5s;
+    text-decoration: none;
 }
-
+a{
+    color: rgb(40, 40, 40);
+}
 .intro-content {
+    padding-top: 15dvh;
     width: 100dvw;
 }
 
@@ -94,8 +112,8 @@ a:hover {
     transition: all 0.5s;
 }
 
-.desc:hover+.icos {
-    margin-top: 33%;
+.desc:hover~.icos {
+    margin-top: 11.5%;
     transition: all 0.5s;
 }
 
@@ -108,6 +126,7 @@ a:hover {
     width: 50dvw;
     margin-right: -28dvw;
     position: relative;
+    z-index: 5;
     flex: 1;
 }
 
@@ -115,9 +134,11 @@ a:hover {
     position: relative;
     flex: 1;
     margin-left: 5%;
+    width: fit-content;
+    z-index: 6;
 }
 .atext{
-    width: 50dvw;
+    width: 60%;
 }
 .desc {
     margin-left: 20%;
@@ -126,34 +147,67 @@ a:hover {
     transition: margin-left 0.5s ease-in-out;
     flex-wrap: wrap;
 }
-
 /*icons*/
 .icos:hover {
-    margin-top: 33%;
+    margin-top: 11.5%;
+
 }
 
 .langico {
     width: 7dvh;
     position: relative;
-    z-index: 6;
+    margin-top: -90%;
     margin-right: 2dvh;
     margin-left: 2dvh;
 }
 
 .icos {
-    margin-left: 20.5%;
+    margin-left: 22%;
     width: fit-content;
-    margin-top: 20%;
+    height: fit-content;
+    z-index: 3;
     transition: margin-top 1s ease-in-out;
     transition-delay: 2s;
-    position: absolute;
+    position: relative;
 }
-
+.s-about{
+    color: black;
+    padding-top: 15dvh;
+    padding-left: 13dvw;
+    text-align: justify;
+}
+.am{
+    font-size: 50px;
+    font-weight:380 ;
+    padding-left: 1dvw;
+    padding-bottom: 8dvh;
+}
+.lead {
+    padding-right: 3dvw !important;
+    font-weight: 350;
+    font-size: 24px;
+}
+.about-me{
+    margin-left: -2%;
+}
+.about-experience{
+    padding-top: 20dvh;
+}
+.plink{
+    font-size: 60px;
+    color: black;
+    z-index: 10;
+    margin-left: 10dvw;
+    margin-top: -10dvh;
+}
+.fa-brands{
+    padding-left: 8%;
+}
 @media (max-width: 1100px) {
     nav ul li a {
         font-size: 16px;
     }
-
+    
     nav ul {
         margin-right: 13%;
         transition: all 0;
@@ -163,17 +217,22 @@ a:hover {
         margin-left: 12dvw !important;
         transition: margin-left 0.5s ease-in-out;
     }
+    .text{
+        margin-top: 15dvh;
+    }
 }
-
 @media (max-width: 1000px) {
     .desc {
         flex-direction: column;
         margin-left: 0dvw !important;
         width: 100dvw;
     }
-
+    .s-intro{
+        height: max-content;
+    }
     .text {
-        margin-left: 25dvw !important;
+        width: 90dvw !important;
+        text-align:justify;
     }
     .intro-pic{
         width: 50dvw !important;
@@ -181,13 +240,48 @@ a:hover {
     .pic {
         padding-left: 26dvw !important;
     }
+    .atext{
+        padding-left: 20dvw !important;    
+        padding-right: 10dvw !important;
+        font-size: 20px;
+        width: 80dvw;
+    }
+    .display-4{
+        padding-left: 20dvw !important;    
+        padding-right: 20dvw !important;
+    }
+    .desc:hover+.icos {
+        margin-top: 20dvh;
+        transition: all 0.5s;
+    }
+    .icos:hover {
+        margin-top: 50%;
+    }
+    .langico {
+        width: 7dvh;
+        position: relative;
+        margin-top: -190dvh;
+        margin-right: 2dvh;
+        margin-left: 2dvh;
+    }
+    
+    .icos {
+        margin-left: 32%;
+        width: fit-content;
+        z-index: 3000;
+        height: fit-content;
+    }
 }
-
 @media (max-width: 871px) {
     .checkbtn {
-        position: fixed;
+        position: relative;
+        z-index: 10;
         display: block;
         float: right;
+    }
+    .s-intro{
+        width: fit-content;
+        height: max-content;
     }
     nav ul {
         position: fixed;
@@ -209,9 +303,36 @@ a:hover {
     }
     .display-4 {
         font-size: 40px;
+        width: fit-content;
+        padding-left: 20dvw !important;    
+        padding-right: 15dvw !important;
     }
-    #check:checked~nav ul {
+    #check:checked~ ul {
         top: 80px!important;
+    }
+    .text{
+        width: 100dvw;
+    }
+    .atext{
+        font-size: 20px;
+        width: 100%;
+        padding-left: 20dvw !important;    
+        padding-right: 15dvw !important;
+    }
+    .icos {
+        margin-left: 29%;
+        width: fit-content;
+        z-index: 3000;
+        height: fit-content;
+    }
+    .langico {
+        width: 7dvh;
+        position: relative;
+        margin-top: -220dvh;
+    }
+    .desc:hover+.icos {
+        margin-top: 35dvh;
+        transition: all 0.5s;
     }
 }
 
@@ -225,20 +346,16 @@ a:hover {
     .text{
         font-size: small;
         text-align:justify;
-        margin-left: 0vw !important;
-        margin-top: 5dvh;
-
-    }
-    .display-4{
-        padding-left: 14vw;
-
     }
     .atext{
-        width: 86% !important;
-        padding-left: 14vw;
+        width: 100% !important;
         font-size: large;
+        padding-left: 8dvw !important;    
+        padding-right: 8dvw !important;
     }
     .text .display-4{
         font-size: 30px;
+        padding-left: 8dvw !important;    
+        padding-right: 8dvw !important;
     }
     }
