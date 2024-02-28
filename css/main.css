@@ -1,4 +1,3 @@
-
 /*Main Part of CSS*/
 body {
     height: 100dvh;
@@ -8,12 +7,21 @@ body {
     overflow-x: hidden;
 
 }
-header{
+
+section{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+}
+
+
+
+/*Navigation Bar*/
+header {
     position: fixed;
     top: 0;
     display: flex;
     z-index: 30;
 }
+
 nav {
     width: 100dvw;
     height: 80px;
@@ -40,10 +48,19 @@ label.logo {
 }
 
 nav ul {
+    color: rgb(107 114 128);
     float: right;
     position: relative;
-    margin-right: 29%;
+    margin-right: 32dvw;
+    margin-top: 1.5dvh;
+    height: 60px;
     transition: all 0.7s;
+    background-color: #d1d3d6;
+    opacity: 1;
+    transition: background-color 0s;
+    border-radius: 9999px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
 nav ul li {
@@ -51,20 +68,17 @@ nav ul li {
     position: relative;
     margin: 0 15px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: large;
     text-decoration: none;
-    color: white;
-    line-height: 80px;
-    font-weight: bold;
+    line-height: 60px;
+
 }
 
 nav ul li a {
-    color: white;
-    opacity: 0.4;
+    color: #6B7280;
     text-decoration: none;
     font-size: 17px;
-    text-transform: uppercase;
     position: sticky;
+    font-weight:500;
 }
 
 .checkbtn {
@@ -80,38 +94,34 @@ nav ul li a {
 #check {
     display: none;
 }
-.s-intro{
+
+nav a.active,
+nav a:hover {
+    opacity: 1;
+    color: #030712;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+
+
+
+/*Intro Section*/
+.s-intro {
     background-color: #0e131a;
     height: 100%;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
-nav a.active,
-nav a:hover {
-    opacity: 1;
-    color: white;
-    transition: 0.5s;
-    text-decoration: none;
-}  
-a.active,
-a:hover {
-    opacity: 1;
-    color: #0e131a;
-    transition: 0.5s;
-    text-decoration: none;
-}
-a{
-    color: rgb(40, 40, 40);
-}
+
 .intro-content {
     padding-top: 15dvh;
     width: 100dvw;
 }
 
 .intro-pic:hover {
-    box-shadow: 0 0 13px #f8edda;
-    transition: all 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    transition: all 0.5s ease-in-out;
 }
-
 .desc:hover~.icos {
     margin-top: 11.5%;
     transition: all 0.5s;
@@ -120,6 +130,8 @@ a{
 .intro-pic {
     border-radius: 100%;
     width: 50%;
+    transition: all 0.5s ease-in-out;
+
 }
 
 .pic {
@@ -137,9 +149,11 @@ a{
     width: fit-content;
     z-index: 6;
 }
-.atext{
+
+.atext {
     width: 60%;
 }
+
 .desc {
     margin-left: 20%;
     margin-top: 5%;
@@ -147,7 +161,7 @@ a{
     transition: margin-left 0.5s ease-in-out;
     flex-wrap: wrap;
 }
-/*icons*/
+
 .icos:hover {
     margin-top: 11.5%;
 
@@ -170,93 +184,138 @@ a{
     transition-delay: 2s;
     position: relative;
 }
-.s-about{
+
+
+
+
+/*About Section*/
+.s-about {
     color: black;
     padding-top: 15dvh;
     padding-left: 13dvw;
     text-align: justify;
 }
-.am{
+
+.am {
     font-size: 50px;
-    font-weight:380 ;
+    font-weight: 380;
     padding-left: 1dvw;
     padding-bottom: 8dvh;
 }
+
 .lead {
     padding-right: 3dvw !important;
     font-weight: 350;
     font-size: 24px;
 }
-.about-me{
+
+.about-me {
     margin-left: -2%;
+    padding-bottom: 20dvh;
 }
-.about-experience{
-    padding-top: 20dvh;
-}
-.plink{
+
+.plink {
     font-size: 60px;
     color: black;
     z-index: 10;
     margin-left: 10dvw;
     margin-top: -10dvh;
 }
-.fa-brands{
+
+.fa-brands {
     padding-left: 8%;
 }
+
+.moon {
+    font-size: 30px;
+    font-weight: 470;
+}
+
+.about-me a.active,
+.about-me a:hover {
+    opacity: 1;
+    color: #0e131a;
+    transition: 0.5s;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(40, 40, 40);
+}
+
+
+
+
+/*Media Queries*/
 @media (max-width: 1100px) {
+    @keyframes popout {
+        from{transform:scale(0)}
+        80%{transform:scale(1.2)}
+        to{transform:scale(1)}
+    }
     nav ul li a {
         font-size: 16px;
     }
-    
     nav ul {
         margin-right: 13%;
-        transition: all 0;
+        transition: height 0s;
+        transition: width 3s;
     }
-
     .desc {
         margin-left: 12dvw !important;
         transition: margin-left 0.5s ease-in-out;
     }
-    .text{
-        margin-top: 15dvh;
+
+    .text {
+        margin-top: 4dvh;
     }
 }
+
 @media (max-width: 1000px) {
     .desc {
         flex-direction: column;
         margin-left: 0dvw !important;
         width: 100dvw;
     }
-    .s-intro{
+
+    .s-intro {
         height: max-content;
     }
+
     .text {
         width: 90dvw !important;
-        text-align:justify;
+        text-align: justify;
     }
-    .intro-pic{
+
+    .intro-pic {
         width: 50dvw !important;
     }
+
     .pic {
         padding-left: 26dvw !important;
     }
-    .atext{
-        padding-left: 20dvw !important;    
+
+    .atext {
+        padding-left: 20dvw !important;
         padding-right: 10dvw !important;
         font-size: 20px;
         width: 80dvw;
     }
-    .display-4{
-        padding-left: 20dvw !important;    
+
+    .display-4 {
+        padding-left: 20dvw !important;
         padding-right: 20dvw !important;
     }
+
     .desc:hover+.icos {
         margin-top: 20dvh;
         transition: all 0.5s;
     }
+
     .icos:hover {
         margin-top: 50%;
     }
+
     .langico {
         width: 7dvh;
         position: relative;
@@ -264,7 +323,7 @@ a{
         margin-right: 2dvh;
         margin-left: 2dvh;
     }
-    
+
     .icos {
         margin-left: 32%;
         width: fit-content;
@@ -272,6 +331,7 @@ a{
         height: fit-content;
     }
 }
+
 @media (max-width: 871px) {
     .checkbtn {
         position: relative;
@@ -279,57 +339,71 @@ a{
         display: block;
         float: right;
     }
-    .s-intro{
+
+    .s-intro {
         width: fit-content;
         height: max-content;
     }
+
     nav ul {
         position: fixed;
-        padding-left: 0%!important;
+        padding-left: 0% !important;
         width: 100dvw;
         height: 100dvh;
         background-color: #0e131a;
         top: 80px;
         top: -300%;
+        margin-top: 0dvh;
+        border-radius: 0px;
         text-align: center;
         transition: all 0.5s;
+        transition: background-color 0s;
         margin-left: 0% !important;
     }
     nav ul li {
         display: block;
     }
-    nav ul li a {
-        font-size: 20px;
+
+    nav a:hover,
+    nav a.active {
+        color: white;
     }
+
     .display-4 {
         font-size: 40px;
         width: fit-content;
-        padding-left: 20dvw !important;    
+        padding-left: 20dvw !important;
         padding-right: 15dvw !important;
     }
-    #check:checked~ ul {
-        top: 80px!important;
+
+    #check:checked~ul {
+        top: 80px !important;
     }
-    .text{
+
+    .text {
         width: 100dvw;
     }
-    .atext{
+
+    .atext {
         font-size: 20px;
         width: 100%;
-        padding-left: 20dvw !important;    
+        padding-left: 20dvw !important;
         padding-right: 15dvw !important;
     }
+
     .icos {
         margin-left: 29%;
         width: fit-content;
         z-index: 3000;
         height: fit-content;
     }
+
     .langico {
         width: 7dvh;
         position: relative;
         margin-top: -220dvh;
     }
+
     .desc:hover+.icos {
         margin-top: 35dvh;
         transition: all 0.5s;
@@ -340,22 +414,26 @@ a{
     .pic {
         width: 100vw !important;
     }
-    .intro-pic{
+
+    .intro-pic {
         width: 100vw;
     }
-    .text{
+
+    .text {
         font-size: small;
-        text-align:justify;
+        text-align: justify;
     }
-    .atext{
+
+    .atext {
         width: 100% !important;
         font-size: large;
-        padding-left: 8dvw !important;    
+        padding-left: 8dvw !important;
         padding-right: 8dvw !important;
     }
-    .text .display-4{
+
+    .text .display-4 {
         font-size: 30px;
-        padding-left: 8dvw !important;    
+        padding-left: 8dvw !important;
         padding-right: 8dvw !important;
     }
-    }
+}
