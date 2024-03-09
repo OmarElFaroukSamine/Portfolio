@@ -4,15 +4,24 @@ body {
     background-color: white;
     width: 100dvw;
     color: white;
-    overflow-x: hidden;
-
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    box-sizing: border-box;
+    width: 100;
+    scroll-behavior: smooth;
 }
 
-section{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"
+section {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+.all {
+    height: 100%;
+}
 
+.simplebar-content {
+    scroll-behavior: smooth;
+    height: 100%;
+}
 
 /*Navigation Bar*/
 header {
@@ -29,6 +38,7 @@ nav {
     position: fixed;
     top: 0;
     z-index: 8;
+
 }
 
 label.logo {
@@ -67,7 +77,6 @@ nav ul li {
     display: inline-block;
     position: relative;
     margin: 0 15px;
-    font-family: Arial, Helvetica, sans-serif;
     text-decoration: none;
     line-height: 60px;
 
@@ -78,7 +87,7 @@ nav ul li a {
     text-decoration: none;
     font-size: 17px;
     position: sticky;
-    font-weight:500;
+    font-weight: 500;
 }
 
 .checkbtn {
@@ -122,6 +131,7 @@ nav a:hover {
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: all 0.5s ease-in-out;
 }
+
 .desc:hover~.icos {
     margin-top: 11.5%;
     transition: all 0.5s;
@@ -162,6 +172,18 @@ nav a:hover {
     flex-wrap: wrap;
 }
 
+.btn {
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    padding: 1.2rem 2.4rem;
+}
+
+.btn-dark {
+    margin-right: 2%;
+}
+
 .icos:hover {
     margin-top: 11.5%;
 
@@ -192,15 +214,17 @@ nav a:hover {
 .s-about {
     color: black;
     padding-top: 15dvh;
-    padding-left: 13dvw;
     text-align: justify;
 }
 
 .am {
     font-size: 50px;
-    font-weight: 380;
-    padding-left: 1dvw;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    margin-left: 0%;
     padding-bottom: 8dvh;
+
 }
 
 .lead {
@@ -210,7 +234,8 @@ nav a:hover {
 }
 
 .about-me {
-    margin-left: -2%;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 20dvh;
 }
 
@@ -222,45 +247,244 @@ nav a:hover {
     margin-top: -10dvh;
 }
 
-.fa-brands {
-    padding-left: 8%;
-}
-
-.moon {
-    font-size: 30px;
-    font-weight: 470;
-}
-
-.about-me a.active,
-.about-me a:hover {
-    opacity: 1;
-    color: #0e131a;
-    transition: 0.5s;
-    text-decoration: none;
-}
-
 a {
     color: rgb(40, 40, 40);
 }
 
+.s-skills {
+    height: fit-content;
+    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url("/resources/DP130155.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+    -moz-box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+    box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+
+}
+
+.container {
+    width: 90dvw;
+}
+
+.sk {
+    width: 100%;
+    text-align: center;
+    padding-top: 9%;
+    font-weight: 500;
+    padding-bottom: 10%;
+}
+
+.pl {
+    font-size: 35px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.lwl {
+    width: 100%;
+}
+
+.tani,
+.talt {
+    width: 100%;
+    padding-bottom: 10%;
+    text-align: center;
+}
+
+.tani p,
+.talt p {
+    text-align: justify;
+}
+
+.tani .col,
+.talt .col {
+    padding-left: 4%;
+}
+
+.skills {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills i {
+    font-size: 100px;
+}
+
+.tag-icons {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tag-icons i {
+    margin-right: 10px;
+}
+
+.custom-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.talt .custom-icon {
+    width: 110px;
+    height: 110px;
+    margin-right: 10px;
+}
+
+.talt {
+    width: 66%;
+}
 
 
+.s-edu {
+    padding-top: 15dvh;
+    padding-bottom: 15dvh;
+    width: 100%;
+    height: fit-content;
+    color: #0e131a;
+}
 
+.scho {
+    width: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border: solid #030712;
+    border-radius: 10px;
+    -webkit-box-shadow: -10px 9px 20px 2px rgba(66, 68, 90, 1);
+    -moz-box-shadow: -10px 9px 20px 2px rgba(66, 68, 90, 1);
+    box-shadow: -10px 8px 20px 2px rgba(66, 68, 90, 1);
+}
+
+.rig {
+    margin-left: 10%;
+    margin-right: 20%;
+}
+
+.lef {
+    margin-left: 60%;
+    margin-right: 10%;
+}
+
+.design-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+.design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-content {
+    background: #0E131A;
+    -webkit-box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #242424;
+    color: white;
+    padding: 1.75rem;
+    transition: 0.4s ease;
+    overflow-wrap: break-word !important;
+    border-radius: 6px;
+}
+
+.timeline-component {
+    margin: 0px 20px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .timeline {
+        display: grid;
+        grid-template-columns: 1fr 3px 1fr;
+    }
+
+    .timeline-middle {
+        position: relative;
+        background-image: linear-gradient(45deg, #001d45, #001d45, #001d45);
+        width: 3px;
+        height: 100%;
+    }
+
+    .main-middle {
+        opacity: 0;
+    }
+
+    .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #0E131A, #0E131A, #0E131A);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+}
+
+
+.s-proj {
+    width: 100%;
+    background-color: #0e131a;
+    height: 100%;
+    position: relative;
+    z-index: 3;
+    -webkit-box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+    -moz-box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+    box-shadow: 0px 0px 24px 10px rgba(38, 57, 77, 1);
+}
+
+.s-cert {
+    width: 100%;
+    background-color: white;
+    height: 100%;
+}
 /*Media Queries*/
 @media (max-width: 1100px) {
     @keyframes popout {
-        from{transform:scale(0)}
-        80%{transform:scale(1.2)}
-        to{transform:scale(1)}
+        from {
+            transform: scale(0)
+        }
+
+        80% {
+            transform: scale(1.2)
+        }
+
+        to {
+            transform: scale(1)
+        }
     }
+
     nav ul li a {
         font-size: 16px;
     }
+
     nav ul {
         margin-right: 13%;
         transition: height 0s;
         transition: width 3s;
     }
+
     .desc {
         margin-left: 12dvw !important;
         transition: margin-left 0.5s ease-in-out;
@@ -302,7 +526,7 @@ a {
         width: 80dvw;
     }
 
-    .display-4 {
+    .intr {
         padding-left: 20dvw !important;
         padding-right: 20dvw !important;
     }
@@ -356,10 +580,10 @@ a {
         margin-top: 0dvh;
         border-radius: 0px;
         text-align: center;
-        transition: all 0.5s;
-        transition: background-color 0s;
         margin-left: 0% !important;
+        transition: top 0.5s ease-in-out !important;
     }
+
     nav ul li {
         display: block;
     }
@@ -369,7 +593,7 @@ a {
         color: white;
     }
 
-    .display-4 {
+    .intr {
         font-size: 40px;
         width: fit-content;
         padding-left: 20dvw !important;
@@ -377,7 +601,8 @@ a {
     }
 
     #check:checked~ul {
-        top: 80px !important;
+        top: 79px !important;
+        transition: top 0.5s ease-in-out !important;
     }
 
     .text {

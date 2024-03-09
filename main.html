@@ -3,93 +3,235 @@
 
 <head>
     <title>Portfolio</title>
-    <script src="https://kit.fontawesome.com/5c7a3b9bec.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    <script src="/js/bb1c8ea0f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/simplebar.css" />
+    <script src="js/simplebar.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
 
 <body>
-    <header class="s-header">
-        <nav class="header-nav-wrap">
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fa-solid fa-bars"></i>
-            </label>
-            <label class="logo">OFS</label>
-            <ul class="header-main-nav">
-                <li><a href="#intro" class="active">Intro</a></li>
-                <li><a href="#about" title="About">About</a></li>
-                <li><a href="#services" title="Skills">Skills</a></li>
-                <li><a href="#work" title="Experience">Experience</a></li>
-                <li><a href="#projects" title="projects">Projects</a></li>
-                <li><a href="#certificate" title="Certificates">Certificates</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="intro" class="s-intro target-section">
-        <div class="intro-content">
-            <div class="desc">
-                <div class="pic">
-                    <img src="resources/first.gif" class="intro-pic" id="gif">
-                </div>
-                <div class="text">
-                    <p class="display-4">Computer Science <br> Student</p>
-                    <p class="atext">Hello, I'm Omar. I'm a Computer science Student at the University of Lodz. I spend
-                        my days improving in the field of Computer Science !</p>
-                </div>
-            </div>
-        </div> <!-- end row -->
-    </section>
-    <section id="about" class="s-about target-section">
-        <div class="container about-me">
-            <div class="row">
-                <h2 class="display-4 am">About Me</h2>
-            </div>
-            <div class="row">
-                <div class="col ">
-                    <p class="lead">
-                        I'm a Computer Science student who thrives in the ever-changing tech landscape. I've built a
-                        solid foundation
-                        in programming and computer programs, I adapt quickly to new challenges and technologies.
-                        Eager to contribute to the evolving world of computing. Let's connect and explore the boundless
-                        possibilities
-                        at the intersection of tech and creativity!
-                    </p>
-                    <p class="moon">More on :</p>
-                    <div class="plink">
-                        <a href="https://github.com/OmarElFaroukSamine/"><i class="fa-brands fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/omar-el-farouk-samine/"><i
-                                class="fa-brands fa-linkedin"></i></a>
+    <div data-simplebar class="all">
+        <header class="s-header">
+            <nav class="header-nav-wrap" id="head">
+                <input type="checkbox" id="check">
+                <label for="check" class="checkbtn">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
+                <label class="logo">OFS</label>
+                <ul class="header-main-nav" id="nav">
+                    <li><a href="#intro" class="nava active" id="intr">Intro</a></li>
+                    <li><a href="#about" class="nava" title="About" id="abo">About</a></li>
+                    <li><a href="#skill" class="nava" title="Skills" id="serv">Skills</a></li>
+                    <li><a href="#education" class="nava" title="Education" id="edu">Experience</a></li>
+                    <li><a href="#projects" class="nava" title="Projects" id="proj">Projects</a></li>
+                    <li><a href="#certificate" class="nava" title="Certificates" id="cer">Certificates</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="intro" class="s-intro target-section">
+            <div class="intro-content">
+                <div class="desc">
+                    <div class="pic">
+                        <img src="resources/first.gif" class="intro-pic" id="gif">
+                    </div>
+                    <div class="text">
+                        <p class="display-4 intr">Computer Science <br> Student</p>
+                        <p class="atext">Hello, I'm Omar. I'm a Computer science Student at the University of Lodz. I
+                            spend
+                            my days improving in the field of Computer Science !</p>
+                        <a href="https://github.com/OmarElFaroukSamine/" class="btn btn-xl btn-dark" target="blank">My
+                            GitHub <i class="fa fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/omar-el-farouk-samine/" class="btn btn-xl btn-info"
+                            target="blank">My LinkedIn <i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-                <div class="col">
-                    <p>
-                        Ever since I was a kid, discovering new technologies has piqued my interest. I've dived into the
-                        world of computer architecture at a very young age, thanks to computers being available at my
-                        home. I used to always open my countless broken computers and troubleshoot them by myself, and
-                        it was one of the things that created a love for problem-solving in me.
+            </div> <!-- end row -->
+        </section>
+        <section id="about" class="s-about target-section">
+            <div class="container about-me">
+                <h2 class="display-4 am">About Me</h2>
+                <div class="row">
+                    <div class="col ">
+                        <p class="lead">
+                            I'm a Computer Science student who thrives in the ever-changing tech landscape. I've built a
+                            solid foundation
+                            in programming and computer programs, I adapt quickly to new challenges and technologies.
+                            Eager to contribute to the evolving world of computing. Let's connect and explore the
+                            boundless
+                            possibilities
+                            at the intersection of tech and creativity!
+                        </p>
+                    </div>
+                    <div class="col">
+                        <p>
+                            Ever since I was a kid, discovering new technologies has piqued my interest. I've dived into
+                            the
+                            world of computer architecture at a very young age, thanks to computers being available at
+                            my
+                            home. I used to always open my countless broken computers and troubleshoot them by myself,
+                            and
+                            it was one of the things that created a love for problem-solving in me.
 
-                    </p>
+                        </p>
 
-                    <p>
-                        When I started high school, I started getting introduced to programming and coding, thanks to my
-                        amazing role model, My brother Mohammed Samine. Ever since then, I've been trying to improve my
-                        skills in the field, I've acquired a lot of skills in various programming languages like Python,
-                        and C++. I've also gained knowledge in web development technologies like HTML5, Javascript, CSS,
-                        and PHP.
+                        <p>
+                            When I started high school, I started getting introduced to programming and coding, thanks
+                            to my
+                            amazing role model, My brother Mohammed Samine. Ever since then, I've been trying to improve
+                            my
+                            skills in the field, I've acquired a lot of skills in various programming languages like
+                            Python,
+                            and C++. I've also gained knowledge in web development technologies like HTML5, Javascript,
+                            CSS,
+                            and PHP.
 
-                    </p>
-                    <p>I feel like my skills and my love for problem-solving are the drives that make me have potential
-                        in the field of computer science. I'm looking forward to finishing my studies and becoming a
-                        driving force in the industry !!
-                    </p>
+                        </p>
+                        <p>I feel like my skills and my love for problem-solving are the drives that make me have
+                            potential
+                            in the field of computer science. I'm looking forward to finishing my studies and becoming a
+                            driving force in the industry !!
+                        </p>
+                    </div>
+                </div>
+            </div> <!-- end about-me -->
+        </section>
+        <section id="skill" class="s-skills target-section">
+            <div class="container skills">
+                <h2 class="display-4 sk">Skills</h2>
+                <div class="row tani">
+                    <div class="col">
+                        <i class="fa-brands fa-python"></i>
+                        <h2 class="display-4 pl">
+                            Python
+                        </h2>
+                        <p>In the last four years, I've had the chance to gain a lot of experience in Python. Since it
+                            was the first
+                            programming language I learnt, I first started using it in high school but it was in ISTA
+                            where I really
+                            grasped it. I learnt a lot of the programming concepts using it, like data structures, basic
+                            control structures,
+                            Object Oriented Programming GUI etc..., and I've been using it ever since for personal
+                            projects and aim to use it
+                            for future projects.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <i class="fa-solid fa-code"></i>
+                        <h2 class="display-4 pl">
+                            Web development
+                        </h2>
+                        <p>After joining ISTA, I was introduced to web development since it was one of the main subjects
+                            that i studied there. I started using HTML, CSS and Bootstrap to create basic websites after
+                            that i dove deeper into the world of Javascript. since I already knew a lot of the basics of
+                            programming from studying Python before it. I found it kind of easy to pick up Javascript.
+                            Since then I've gained a lot of knowledge in it. and I'm currently learning other Javascript
+                            such as Jquery, React and Vue.js.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <img class="custom-icon" src="resources/cplusplus.png" alt="C++ Icon">
+                        <h2 class="display-4 pl">
+                            C++
+                        </h2>
+                        <p>I wanted to get into C++ for a long time after getting into coding, I started learning C when
+                            I was studying at ISTA, so when I joined the University Of Lodz, I already had some basic
+                            understanding of the syntax of C++ and how it works, and there I dove deeper into its other
+                            concepts like pointers and seeing OOP from another point of view etc.</p>
+                    </div>
+                </div>
+                <div class="row talt">
+                    <div class="col">
+                        <img class="custom-icon" src="resources/149181.png" alt="Network Icon">
+                        <h2 class="display-4 pl">
+                            Networking
+                        </h2>
+                        <p>Computer Networks have always piqued my interest. I first heard about this concept around
+                            1st year of middle school, started learning about WLAN, LAN and WAN. it was an
+                            interesting subject that I would get into more when I wanted to understand the blueprint of
+                            the internet. since then I've gained a lot of knowledge on the technologies behind it like
+                            packets, the OSI model, and different protocols like TCP/IP, HTTP, DNS etc. I want to dive a
+                            bit deeper into this subject in the near future.
+                        </p>
+                    </div>
+                    <div class="col">
+                        <i class="fa-solid fa-microchip"></i>
+                        <h2 style="font-size:33.5px ; padding-bottom: 8.6%; padding-top: 14.7%;" class="display-4 pl">
+                            Computer Architecture
+                        </h2>
+                        <p> part of computers has always fascinated me, and I feel like I've gained a lot of knowledge
+                            and experience on it since almost ever since I remember, I've always had PCs that ran into a
+                            lot
+                            of problems that I've had to troubleshoot on my own, I've opened my first computer at the
+                            age of
+                            9. it was probably trying to fix a fan not being connected, a having some issues with the
+                            sound
+                            card. After that, it became a common occurrence for me to open my PC to either fix it or
+                            discover new stuff. </p>
+                    </div>
                 </div>
             </div>
-        </div> <!-- end about-me -->
-    </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+        </section>
+        <section id="education" class="s-edu target-section">
+            <h2 class="display-4 am">Experience</h2>
+            <div class="timeline">
+                <div class="timeline-empty">
+                </div>
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="timeline-component timeline-content">
+                    <h3>University of Lodz</h3>
+                    <h4>Bachelor's degree, Computer Science<br>Oct 2023 - Present</h4>
+                    <p>Some Text.</p>
+                </div>
+                <div class="timeline-component timeline-content">
+                    <h3>Faculty of Science and Technology - Marrakech</h3>
+                    <h4>MCPC (Maths, Computer Science, Physics, Chemistry)<br>Sep 2021- Jun 2022</h4>
+                    <p>While I excelled in my studies during this time, I decided to withdraw due to feeling like I was
+                        wasting my potential on generalized sciences, instead of studying computer science.</p>
+                </div>
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+                
+                <div class=" timeline-component timeline-content">
+                    <h3>Institut Spécialisé de Technologie Appliquée Mohammedia</h3>
+                    <h4>Computer Programming<br>Oct 2022 - May 2023</h4>
+                    <p>At ISTA Mohammedia, my focus was on Computer Science and programming. Over the course of a year,
+                        I delved deep into these subjects, mastering the fundamentals of programming. Recognizing the
+                        immense potential for growth and learning, I made the decision to continue my studies in Poland,
+                        where I knew I would find even greater opportunities to expand my knowledge and skills in this
+                        dynamic field</p>
+                </div>
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-middle">
+                    <div class="timeline-circle"></div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="s-proj target-section">
+        </section>
+        <section id="certificate" class="s-cert target-section">
+        <div class="container"></div>
+        </section>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/main.js"></script>
+    </div>
 </body>
+
 </html>
