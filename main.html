@@ -3,11 +3,11 @@
 
 <head>
     <title>Portfolio</title>
-        <script src="/js/bb1c8ea0f3.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/bootstrap.min.css"
+    <script src="https://kit.fontawesome.com/bb1c8ea0f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/simplebar.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/simplebar.css" />
     <script src="js/simplebar.min.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
 </head>
@@ -20,20 +20,20 @@
                 <label for="check" class="checkbtn">
                     <i class="fa-solid fa-bars"></i>
                 </label>
-                <label class="logo">OFS</label>
+                <a class="logoa" href="#intro"><label class="logo">OFS</label></a>
                 <ul class="header-main-nav" id="nav">
                     <li><a href="#intro" class="nava active" id="intr">Intro</a></li>
                     <li><a href="#about" class="nava" title="About" id="abo">About</a></li>
                     <li><a href="#skill" class="nava" title="Skills" id="serv">Skills</a></li>
                     <li><a href="#education" class="nava" title="Education" id="edu">Education</a></li>
                     <li><a href="#projects" class="nava" title="Projects" id="proj">Projects</a></li>
-                    <li><a href="#certificate" class="nava" title="Certificates" id="cer">Certificates</a></li>
+                    <li><a href="#contact" class="nava" title="contact" id="cer">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
-        <section id="intro" class="s-intro target-section">
-            <div class="intro-content">
+        <section id="intro" class="s-intro target-section fadeInBottom ">
+            <div class="intro-content ">
                 <div class="desc">
                     <div class="pic">
                         <img src="resources/first.gif" class="intro-pic" id="gif">
@@ -43,18 +43,14 @@
                         <p class="atext">Hello, I'm Omar. I'm a Computer science Student at the University of Lodz. I
                             spend
                             my days improving in the field of Computer Science !</p>
-                        <a href="https://github.com/OmarElFaroukSamine/" class="btn btn-xl btn-dark" target="blank">My
-                            GitHub <i class="fa fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/omar-el-farouk-samine/" class="btn btn-xl btn-info"
-                            target="blank">My LinkedIn <i class="fa fa-linkedin"></i></a>
                     </div>
                 </div>
-            </div> <!-- end row -->
+            </div>
         </section>
-        <section id="about" class="s-about target-section">
+        <section id="about" class="s-about target-section ">
             <div class="container about-me">
-                <h2 class="display-4 am">About Me</h2>
-                <div class="row">
+                <h2 class="display-4 am fade-in">About Me</h2>
+                <div class="row fade-in">
                     <div class="col ">
                         <p class="lead">
                             I'm a Computer Science student who thrives in the ever-changing tech landscape. I've built a
@@ -97,12 +93,12 @@
                         </p>
                     </div>
                 </div>
-            </div> <!-- end about-me -->
+            </div>
         </section>
         <section id="skill" class="s-skills target-section">
             <div class="container skills">
-                <h2 class="display-4 sk">Skills</h2>
-                <div class="row tani">
+                <h2 class="display-4 sk fade-in">Skills</h2>
+                <div class="row tani fade-in">
                     <div class="col">
                         <i class="fa-brands fa-python"></i>
                         <h2 class="display-4 pl">
@@ -143,7 +139,7 @@
                             concepts like pointers and seeing OOP from another point of view etc.</p>
                     </div>
                 </div>
-                <div class="row talt">
+                <div class="row talt fade-in">
                     <div class="col">
                         <img class="custom-icon" src="resources/149181.png" alt="Network Icon">
                         <h2 class="display-4 pl">
@@ -176,14 +172,14 @@
             </div>
         </section>
         <section id="education" class="s-edu target-section">
-            <h2 class="display-4 am"><i class="fa-solid fa-graduation-cap"></i><br>Education</h2>
+            <h2 class="display-4 am fade-in"><i class="fa-solid fa-graduation-cap"></i><br>Education</h2>
             <div class="timeline">
-                <div class="timeline-empty">
+                <div class="timeline-empty fade-in">
                 </div>
-                <div class="timeline-middle">
+                <div class="timeline-middle fade-in">
                     <div class="timeline-circle"></div>
                 </div>
-                <a href="https://www.math.uni.lodz.pl/en/" target="_blank">
+                <a href="https://www.math.uni.lodz.pl/en/" class="fade-in" target="_blank">
                     <div class="timeline-component timeline-content rig">
                         <img src="resources/UL.png" class="schoico" alt="">
                         <span style="vertical-align: middle;">
@@ -197,34 +193,8 @@
                             first semester with a GPA of 4.2/5</p>
                     </div>
                 </a>
-                <a href="http://www.fstg-marrakech.ac.ma/FST/" target="_blank">
+                <a href="https://www.google.com/search?q=ista+mohammedia" class="fade-in" target="_blank">
                     <div class="timeline-component timeline-content lef">
-                        <img src="resources/FST.png" class="schoico" alt="">
-                        <span style="vertical-align: middle;">
-                            <h3>FST - Marrakech</h3>
-                        </span>
-                        <h4>MCPC (Maths, Computer Science, Physics, Chemistry)</h4>
-                        <h4>Sep 2021- Jun 2022</h4>
-                        <p>While I excelled in my studies during this time, I decided to withdraw due to feeling like I
-                            was
-                            wasting my potential on generalized sciences, instead of studying computer science.</p>
-                    </div>
-                </a>
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-                <div class="timeline-empty">
-                </div>
-
-                <div class="timeline-empty">
-                </div>
-
-                <div class="timeline-middle">
-                    <div class="timeline-circle"></div>
-                </div>
-
-                <a href="https://www.google.com/search?q=ista+mohammedia" target="_blank">
-                    <div class=" timeline-component timeline-content rig">
                         <img src="resources/ofppt.png" class="schoico" alt="">
                         <span style="vertical-align: middle;">
                             <h3>ISTA - Mohammedia</h3>
@@ -242,34 +212,102 @@
                             dynamic field</p>
                     </div>
                 </a>
+                <div class="timeline-middle fade-in">
+                    <div class="timeline-circle"></div>
+                </div>
                 <div class="timeline-empty">
                 </div>
 
-                <div class="timeline-middle">
+                <div class="timeline-empty">
+                </div>
+
+                <div class="timeline-middle fade-in">
+                    <div class="timeline-circle"></div>
+                </div>
+
+                <a href="http://www.fstg-marrakech.ac.ma/FST/" class="fade-in" target="_blank">
+                    <div class=" timeline-component timeline-content rig">
+                        <img src="resources/FST.png" class="schoico" alt="">
+                        <span style="vertical-align: middle;">
+                            <h3>FST - Marrakech</h3>
+                        </span>
+                        <h4>MCPC (Maths, Computer Science, Physics, Chemistry)</h4>
+                        <h4>Sep 2021- Jun 2022</h4>
+                        <p>While I excelled in my studies during this time, I decided to withdraw due to feeling like I
+                            was wasting my potential on generalized sciences, instead of studying computer science.</p>
+                    </div>
+                </a>
+                <div class="timeline-empty">
+                </div>
+                <div class="timeline-middle fade-in">
                     <div class="timeline-circle"></div>
                 </div>
             </div>
         </section>
         <section id="projects" class="s-proj target-section clearfix">
-            <h2 class="display-4 am">Projects</h2>
-            <div class="container skills">
-                <div class="pro">
-                dqsdqs
+            <h2 class="display-4 am fade-in">Projects (Work in progress)</h2>
+            <div class="container projec">
+                <div class="row r1 fade-in">
+                    <div class="col pc c1">
+                        <div class="cont">
+                            <h2 class="display-4 pt" style="color: green;">Excel Searching Script</h2>
+                            <p class="ptex">Small program i made to check if a student is actually in a group before accepting 
+                                them into a whatsapp
+                                group that were divided depending on your class number, It's made using Python and it's GUI 
+                                Toolkit Tkinter</p>
+                            <a href="https://github.com/OmarElFaroukSamine/Excel-tool" class="btn btn-xl btn-dark mog"
+                                target="blank">More on
+                                GitHub <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col pc c2">
+                        <div class="cont">
+                            <h2 class="display-4 pt">Froggy</h2>
+                            <p class="ptex">This program is my first assignment actual project in C++. it's about
+                                calculating whether a frog can cross a certain distance based on 3
+                                arguments</p>
+                            <a href="https://github.com/OmarElFaroukSamine/Froggy-C-" class="btn btn-xl btn-dark mog"
+                                target="blank">More on
+                                GitHub <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="pro">
-                    qsdqsdqs
-                </div>
-                <div class="pro">
-                    qsdqsdqs
+                <div class="row r2 fade-in">
+                    <div class="col pc c3">
+                        <div class="cont">
+                            <h2 class="display-4 pt">Rap Blog and CV project</h2>
+                            <p class="ptex">This was my first attempt at creating a website using pure HTML and CSS, it also has an old version of
+                                my CV in HTML and CSS</p>
+                            <a href="https://github.com/OmarElFaroukSamine/Projet-html-rap" class="btn btn-xl btn-dark mog"
+                                target="blank">More on
+                                GitHub <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col pc c4">
+                        <div class="cont">
+                            <a href="https://github.com/OmarElFaroukSamine/" class="btn btn-xl btn-dark mog"
+                                target="blank">More on
+                                GitHub <i class="fa fa-github"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="certificate" class="s-cert target-section">
-            <div class="container"></div>
+        <section id="contact" class="s-cont target-section">
+            <h2 class="display-4 am fade-in">Contact Me</h2>
+            <div class="container conta fade-in">
+                <p class="display-4 ct">
+                    Feel free to reach out to me through the following platforms or via email. Whether you have a
+                    question, a project idea, or just want to say hello, I'm always eager to connect and talk :) !!
+                </p>
+                <a target="_blank" href="mailto:omarelfarouk.samine@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a target="_blank" href="https://github.com/OmarElFaroukSamine/"><i class="fa-brands fa-github"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/omar-el-farouk-samine/"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
         </section>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="js/main.js"></script>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

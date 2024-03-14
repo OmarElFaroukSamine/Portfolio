@@ -7,12 +7,21 @@ function preload() {
   }
 }
 
-//-- usage --//
 preload(
   "resources/normal.gif",
   "resources/first.gif",
   "resources/last.gif",
-  "resources/reversed.gif"
+  "resources/reversed.gif",
+  "resources/DP130155.jpg",
+  "resources/DP130155.jpg",
+  "resources/cplusplus.png",
+  "resources/149181.png",
+  "resources/FST.png",
+  "resources/ofppt.png",
+  "resources/UL.png",
+  "resources/CvBlog.jpg",
+  "resources/excel.jpg",
+  "resources/frog.jpg"
 );
 
 var firstFrame = "resources/first.gif";
@@ -80,15 +89,13 @@ function navBarColor() {
   const $intro = $('#intro');
   const $about = $('#about');
   const $education = $('#education');
-  const $projects= $('#projects');
-  const $certificate = $('#certificate');
+  const $contact = $('#contact');
   const $myHead = $('#head');
   const offset = $myHead.outerHeight();
   const introBounding = $intro[0].getBoundingClientRect();
   const aboutBounding = $about[0].getBoundingClientRect();
-  const projectsBounding = $projects[0].getBoundingClientRect();
   const educationBounding = $education[0].getBoundingClientRect();
-  const certificateBounding = $certificate[0].getBoundingClientRect();
+  const contactBounding = $contact[0].getBoundingClientRect();
   const isWideScreen = $(window).innerWidth() > 871;
 
   if (offset > introBounding.bottom) {
@@ -102,15 +109,15 @@ function navBarColor() {
       $myLi.find('a').css('color', $activeAnchor.length > 0 ? 'white' : '#6B7280');
     }
     const isScrolledToSection = offset > aboutBounding.top && aboutBounding.bottom > offset ||
-                                offset > educationBounding.top && educationBounding.bottom > offset ||
-                                offset > certificateBounding.top && certificateBounding.bottom > offset;
+      offset > educationBounding.top && educationBounding.bottom > offset ||
+      offset > contactBounding.top && contactBounding.bottom > offset;
     $myHead.css({
       'box-shadow': isScrolledToSection ? 'rgb(38, 57, 77) 0px 8px 30px -4px' : 'none',
       '-webkit-box-shadow': isScrolledToSection ? 'rgb(38, 57, 77) 0px 8px 30px -4px' : 'none',
       '-moz-box-shadow': isScrolledToSection ? 'rgb(38, 57, 77) 0px 8px 30px -4px' : 'none',
       'transition': 'box-shadow 0.2s ease-in-out'
     });
-      $myLi.each(function () {
+    $myLi.each(function () {
       const $anchor = $(this).find('a');
       const isActive = $anchor.hasClass('active');
       $anchor.css({
@@ -169,31 +176,118 @@ var addClassOnScroll = function () {
 
 $(document).ready(function () {
   const scrollContainer = $('.simplebar-content')[0];
-  const simpleBarInstance = new SimpleBar(scrollContainer);
-  const $scrollElement = $(simpleBarInstance.getScrollElement());
-  const $window = $(window);
+  if (scrollContainer) {
+    const simpleBarInstance = new SimpleBar(scrollContainer);
+    const $scrollElement = $(simpleBarInstance.getScrollElement());
+    const $window = $(window);
 
-
-  function both(){
-    navBarColor();
-    addClassOnScroll();
-  }
-  $scrollElement.on('scroll', both);
-  $window.on('resize', both);
-
-
-  
-  $('.nava').click(function (event) {
-    event.preventDefault();
-    var id = $(this).attr("href").split("#")[1];
-    if (id) {
-      var el = $("#" + id);
-      var container = el.closest('.simplebar-content-wrapper')
-      if (el.length) {
-        var scrollTo = el.offset().top - container.offset().top + container.scrollTop();
-        $(container).animate({ scrollTop: scrollTo }, 'slow');
-      }
+    function both() {
+      navBarColor();
+      addClassOnScroll();
     }
-  both();
-  });
+
+    function fadeInOnScroll() {
+      $('.fade-in').each(function () {
+        var tester = this;
+        var dist = 100;
+        if (checkVisible(tester, dist, 'visible')) {
+          $(this).addClass('fade-in-show');
+        }
+      });
+    }
+
+    function checkVisible(elm, threshold, mode) {
+      threshold = threshold || 0;
+      mode = mode || 'visible';
+
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      var above = rect.bottom - threshold < 0;
+      var below = rect.top - viewHeight + threshold >= 0;
+
+      return mode === 'above' ? above : (mode === 'below' ? below : !above && !below);
+    }
+
+    function clickOnAnch(event) {
+      event.preventDefault();
+      var id = $(this).attr("href").split("#")[1];
+      if (id) {
+        var el = $("#" + id);
+        var container = el.closest('.simplebar-content-wrapper')
+        if (el.length) {
+          var scrollTo = el.offset().top - container.offset().top + container.scrollTop();
+          $(container).animate({ scrollTop: scrollTo }, 'slow');
+        }
+      }
+      both();
+    }
+    function scrollToTheTop(event) {
+      event.preventDefault();
+      $('.simplebar-content-wrapper').animate({ scrollTop: 0 }, 'slow');
+    }
+    history.scrollRestoration = "manual";
+    $(window).on('beforeunload', function () {
+      $(window).scrollTop(0);
+    });
+    $scrollElement.on('scroll', both);
+    $window.on('resize', both);
+    $scrollElement.on('scroll', fadeInOnScroll);
+    $('.nava').click(clickOnAnch);
+    $('.logoa').click(scrollToTheTop);
+  } else {
+    const $window = $(window);
+
+    function both() {
+      navBarColor();
+      addClassOnScroll();
+    }
+
+    function fadeInOnScroll() {
+      $('.fade-in').each(function () {
+        var tester = this;
+        var dist = 100;
+        if (checkVisible(tester, dist, 'visible')) {
+          $(this).addClass('fade-in-show');
+        }
+      });
+    }
+
+    function checkVisible(elm, threshold, mode) {
+      threshold = threshold || 0;
+      mode = mode || 'visible';
+
+      var rect = elm.getBoundingClientRect();
+      var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      var above = rect.bottom - threshold < 0;
+      var below = rect.top - viewHeight + threshold >= 0;
+
+      return mode === 'above' ? above : (mode === 'below' ? below : !above && !below);
+    }
+
+    function clickOnAnch(event) {
+      event.preventDefault();
+      var id = $(this).attr("href").split("#")[1];
+      if (id) {
+        var el = $("#" + id);
+        if (el.length) {
+          var scrollTo = el.offset().top;
+          $('html, body').animate({ scrollTop: scrollTo }, 'slow');
+        }
+      }
+      both();
+    }
+    function scrollToTheTop(event) {
+      event.preventDefault();
+      $('html, body').animate({ scrollTop: 0 }, 'slow');
+    }
+    history.scrollRestoration = "manual";
+    $(window).on('beforeunload', function () {
+      $(window).scrollTop(0);
+    });
+    $window.on('scroll', both);
+    $window.on('resize', both);
+    $window.on('scroll', fadeInOnScroll);
+    $('.nava').click(clickOnAnch);
+    $('.logoa').click(scrollToTheTop);
+  }
 });
