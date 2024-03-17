@@ -175,12 +175,11 @@ var addClassOnScroll = function () {
 };
 
 $(document).ready(function () {
-  const scrollContainer = $('.simplebar-content')[0];
+  const scrollContainer = document.querySelector('#my-scrollbar');
   if (scrollContainer) {
-    const simpleBarInstance = new SimpleBar(scrollContainer);
-    const $scrollElement = $(simpleBarInstance.getScrollElement());
-    const $window = $(window);
-
+    const options = {};
+    const smoothScrollbar = Scrollbar.init(scrollContainer, options);
+  
     function both() {
       navBarColor();
       addClassOnScroll();
@@ -213,25 +212,28 @@ $(document).ready(function () {
       var id = $(this).attr("href").split("#")[1];
       if (id) {
         var el = $("#" + id);
-        var container = el.closest('.simplebar-content-wrapper')
+        var container = el.closest('#my-scrollbar')
         if (el.length) {
-          var scrollTo = el.offset().top - container.offset().top + container.scrollTop();
-          $(container).animate({ scrollTop: scrollTo }, 'slow');
+          var scrollTo = el.offset().top;
+          smoothScrollbar.scrollTo(0, scrollTo,);
         }
       }
       both();
     }
+
     function scrollToTheTop(event) {
       event.preventDefault();
-      $('.simplebar-content-wrapper').animate({ scrollTop: 0 }, 'slow');
+      smoothScrollbar.scrollTo(0, 0);
     }
+
     history.scrollRestoration = "manual";
     $(window).on('beforeunload', function () {
       $(window).scrollTop(0);
     });
-    $scrollElement.on('scroll', both);
-    $window.on('resize', both);
-    $scrollElement.on('scroll', fadeInOnScroll);
+
+    smoothScrollbar.addListener(both);
+    $(window).on('resize', both);
+    smoothScrollbar.addListener(fadeInOnScroll);
     $('.nava').click(clickOnAnch);
     $('.logoa').click(scrollToTheTop);
   } else {
@@ -276,14 +278,17 @@ $(document).ready(function () {
       }
       both();
     }
+
     function scrollToTheTop(event) {
       event.preventDefault();
       $('html, body').animate({ scrollTop: 0 }, 'slow');
     }
+
     history.scrollRestoration = "manual";
     $(window).on('beforeunload', function () {
       $(window).scrollTop(0);
     });
+
     $window.on('scroll', both);
     $window.on('resize', both);
     $window.on('scroll', fadeInOnScroll);

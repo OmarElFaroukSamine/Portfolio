@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/simplebar.css" />
-    <script src="js/simplebar.min.js"></script>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div data-simplebar class="all">
         <header class="s-header">
             <nav class="header-nav-wrap" id="head">
                 <input type="checkbox" id="check">
@@ -31,7 +29,7 @@
                 </ul>
             </nav>
         </header>
-
+        <div class="all" id="my-scrollbar" data-scrollbar>
         <section id="intro" class="s-intro target-section fadeInBottom ">
             <div class="intro-content ">
                 <div class="desc">
@@ -251,9 +249,11 @@
                     <div class="col pc c1">
                         <div class="cont">
                             <h2 class="display-4 pt" style="color: green;">Excel Searching Script</h2>
-                            <p class="ptex">Small program i made to check if a student is actually in a group before accepting 
+                            <p class="ptex">Small program i made to check if a student is actually in a group before
+                                accepting
                                 them into a whatsapp
-                                group that were divided depending on your class number, It's made using Python and it's GUI 
+                                group that were divided depending on your class number, It's made using Python and it's
+                                GUI
                                 Toolkit Tkinter</p>
                             <a href="https://github.com/OmarElFaroukSamine/Excel-tool" class="btn btn-xl btn-dark mog"
                                 target="blank">More on
@@ -276,10 +276,11 @@
                     <div class="col pc c3">
                         <div class="cont">
                             <h2 class="display-4 pt">Rap Blog and CV project</h2>
-                            <p class="ptex">This was my first attempt at creating a website using pure HTML and CSS, it also has an old version of
+                            <p class="ptex">This was my first attempt at creating a website using pure HTML and CSS, it
+                                also has an old version of
                                 my CV in HTML and CSS</p>
-                            <a href="https://github.com/OmarElFaroukSamine/Projet-html-rap" class="btn btn-xl btn-dark mog"
-                                target="blank">More on
+                            <a href="https://github.com/OmarElFaroukSamine/Projet-html-rap"
+                                class="btn btn-xl btn-dark mog" target="blank">More on
                                 GitHub <i class="fa fa-github"></i></a>
                         </div>
                     </div>
@@ -300,14 +301,22 @@
                     Feel free to reach out to me through the following platforms or via email. Whether you have a
                     question, a project idea, or just want to say hello, I'm always eager to connect and talk :) !!
                 </p>
-                <a target="_blank" href="mailto:omarelfarouk.samine@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                <a target="_blank" href="mailto:omarelfarouk.samine@gmail.com"><i
+                        class="fa-regular fa-envelope"></i></a>
                 <a target="_blank" href="https://github.com/OmarElFaroukSamine/"><i class="fa-brands fa-github"></i></a>
-                <a target="_blank" href="https://www.linkedin.com/in/omar-el-farouk-samine/"><i class="fa-brands fa-linkedin-in"></i></a>
-                </div>
+                <a target="_blank" href="https://www.linkedin.com/in/omar-el-farouk-samine/"><i
+                        class="fa-brands fa-linkedin-in"></i></a>
+            </div>
         </section>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/smooth-scrollbar@8.8.4/dist/smooth-scrollbar.js"></script>
+    <script>
+        var Scrollbar = window.Scrollbar;
+
+        Scrollbar.init(document.querySelector('#my-scrollbar'));
+    </script>
 </body>
 
 </html>

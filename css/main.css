@@ -26,10 +26,7 @@ section {
     height: 100%;
 }
 
-.simplebar-content {
-    scroll-behavior: smooth;
-    height: 100%;
-}
+
 /*Navigation Bar*/
 header {
     position: fixed;
